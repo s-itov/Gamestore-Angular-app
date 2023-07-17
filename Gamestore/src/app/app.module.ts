@@ -3,7 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes, UrlSerializer} from '@angular/router';
+import { CoreModule } from './core/core.module';
+import { UserModule } from './user/user.module';
 
 const appRoutes: Routes = [
 //   { path: '', pathMatch: 'full', component: HeroSectionComponent },
@@ -26,11 +28,13 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CoreModule,
+    UserModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
