@@ -386,13 +386,13 @@ Header Style
   letter-spacing: .25px;
 }
 
-.header-area .main-nav .nav li:last-child a {
+.header-area .main-nav .nav li:nth-last-child(-n+2) a {
   background-color: #ee626b;
   text-transform: uppercase;
   font-weight: 500;
 }
 
-.header-area .main-nav .nav li:last-child:hover a {
+.header-area .main-nav .nav li::nth-last-child(-n+2):hover a {
   background-color: #ee626b;
 }
 
