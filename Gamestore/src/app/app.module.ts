@@ -23,7 +23,7 @@ const appRoutes: Routes = [
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  // { path: ':id/details', pathMatch: 'full', component: DetailsComponent },
+  //  { path: ':id/details', pathMatch: 'full', component: DetailsComponent },
   //   { path: 'create', component: CreateComponent, canActivate: [loginGuard] },
   //   {
   //     path: ':id/edit',
