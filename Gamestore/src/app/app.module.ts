@@ -13,6 +13,9 @@ import { CatalogComponent } from './user/catalog/catalog.component';
 import { ContactUsComponent } from './core/contact-us/contact-us.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { NotFoundComponent } from './shared/not-found/not-found.component';
+import { SharedModule } from './shared/shared.module';
+import { DetailsComponent } from './user/details/details.component';
 
 const appRoutes: Routes = [
   { path: '', pathMatch: 'full', component: HeroComponent },
@@ -20,7 +23,7 @@ const appRoutes: Routes = [
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  //   { path: ':id/details', pathMatch: 'full', component: DetailsComponent },
+  // { path: ':id/details', pathMatch: 'full', component: DetailsComponent },
   //   { path: 'create', component: CreateComponent, canActivate: [loginGuard] },
   //   {
   //     path: ':id/edit',
@@ -29,7 +32,7 @@ const appRoutes: Routes = [
   //     canActivate: [loginGuard, ownerGuard],
   //   },
   //   { path: 'profile', component: ProfileComponent, canActivate: [loginGuard] },
-  //   { path: '**', component: NotFoundComponent },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
@@ -38,6 +41,7 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
+    SharedModule,
     AuthModule,
     UserModule,
     RouterModule.forRoot(appRoutes),
