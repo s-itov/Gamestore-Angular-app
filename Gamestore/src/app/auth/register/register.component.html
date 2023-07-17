@@ -1,0 +1,64 @@
+<div class="page-heading header-text">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Register</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="register-form">
+    <h2>Register</h2>
+    <form>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input
+                type="text"
+                id="username"
+                name="userName"
+                placeholder="Your username"
+            />
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your email"
+            />
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+            />
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Confirm password"
+            />
+        </div>
+        <div class="form-group">
+            <label for="avatarUrl">Avatar URL</label>
+            <input
+                type="text"
+                id="avatarUrl"
+                name="avatarUrl"
+                placeholder="https://avatarUrl"
+            />
+        </div>
+        <button type="submit">Register</button>
+        <p class="field">
+            <span>If you already have a profile click <a routerLink="/login">here</a></span>
+        </p>
+    </form>
+</section>
