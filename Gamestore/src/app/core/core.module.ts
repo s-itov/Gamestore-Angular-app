@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { HeroComponent } from './hero/hero.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     ContactUsComponent,
   ],
   imports: [
-    CommonModule, RouterModule
+    CommonModule, RouterModule, SharedModule
   ],
   exports: [
     HeaderComponent,

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CatalogComponent } from './catalog/catalog.component';
 import { DetailsComponent } from './details/details.component';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -12,7 +13,7 @@ import { RouterModule } from '@angular/router';
     DetailsComponent
   ],
   imports: [
-    CommonModule, RouterModule
+    CommonModule, RouterModule, SharedModule
   ],
   exports: [
     CatalogComponent,
