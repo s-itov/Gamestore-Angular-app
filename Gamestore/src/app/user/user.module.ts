@@ -4,20 +4,21 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { DetailsComponent } from './details/details.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
-
-
+import { CreateComponent } from './create/create.component';
 
 @NgModule({
   declarations: [
     CatalogComponent,
-    DetailsComponent
+    DetailsComponent,
+    CreateComponent
   ],
   imports: [
     CommonModule, RouterModule, SharedModule
   ],
   exports: [
     CatalogComponent,
-    DetailsComponent
+    DetailsComponent,
+    CreateComponent
   ]
 })
 export class UserModule { }
