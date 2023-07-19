@@ -17,6 +17,8 @@ import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { SharedModule } from './shared/shared.module';
 import { DetailsComponent } from './user/details/details.component';
 import { CreateComponent } from './user/create/create.component';
+import { EditComponent } from './user/edit/edit.component';
+import { ProfileComponent } from './user/profile/profile.component';
 
 const appRoutes: Routes = [
   { path: '', pathMatch: 'full', component: HeroComponent },
@@ -25,14 +27,9 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: ':id/details', pathMatch: 'full', component: DetailsComponent },
-  { path: 'create', component: CreateComponent }, //canActivate: [loginGuard] },
-  //   {
-  //     path: ':id/edit',
-  //     pathMatch: 'full',
-  //     component: EditComponent,
-  //     canActivate: [loginGuard, ownerGuard],
-  //   },
-  //   { path: 'profile', component: ProfileComponent, canActivate: [loginGuard] },
+  { path: 'create', component: CreateComponent }, //canActivate: [loginGuard] ,
+  { path: ':id/edit', pathMatch: 'full', component: EditComponent }, // canActivate: [loginGuard, ownerGuard],
+  { path: 'profile', component: ProfileComponent }, //canActivate: [loginGuard] 
   { path: '**', component: NotFoundComponent },
 ];
 

@@ -5,12 +5,16 @@ import { DetailsComponent } from './details/details.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { CreateComponent } from './create/create.component';
+import { EditComponent } from './edit/edit.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     CatalogComponent,
     DetailsComponent,
-    CreateComponent
+    CreateComponent,
+    EditComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule, RouterModule, SharedModule
@@ -18,7 +22,9 @@ import { CreateComponent } from './create/create.component';
   exports: [
     CatalogComponent,
     DetailsComponent,
-    CreateComponent
+    CreateComponent,
+    EditComponent,
+    ProfileComponent
   ]
 })
 export class UserModule { }
