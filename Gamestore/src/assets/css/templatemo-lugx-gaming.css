@@ -1183,6 +1183,7 @@ Shop Page Style
 --------------------------------------------- 
 */
 
+
 .trending ul.trending-filter {
   list-style: none;
   text-align: center;
@@ -1226,12 +1227,14 @@ Shop Page Style
   overflow: hidden;
   border-radius: 25px;
   margin-bottom: 30px;
+  height: 300px;
 }
 
 .trending-box .item .thumb {
   position: relative;
   border-radius: 25px;
   overflow: hidden;
+  height: 166px;
 }
 
 .trending-box .item span.price em {
@@ -1245,8 +1248,8 @@ Shop Page Style
 .trending-box .item span.price {
   text-align: right;
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 200px;
+  top: 12px;
   border-radius: 10px;
   background-color: #008af8;
   font-size: 17px;

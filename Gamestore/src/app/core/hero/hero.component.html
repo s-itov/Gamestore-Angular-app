@@ -5,9 +5,7 @@
                 <div class="caption header-text">
                     <h6>Welcome to lugx</h6>
                     <h2>BEST GAMING SITE EVER!</h2>
-                    <p>LUGX Gaming is free Bootstrap 5 HTML CSS website template for your gaming websites. You can
-                        download and
-                        use this layout for commercial purposes. Please tell your friends about TemplateMo.</p>
+                    <p>Welcome to LUGX Gaming, the ultimate platform for gamers! Here, you can unleash the true potential of your owned games by creating enticing offers for other users to explore and purchase. Our user-friendly interface allows you to showcase your collection and set your desired prices effortlessly.</p>
                     <div class="search-input">
                         <form id="search" action="#">
                             <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword"
@@ -32,7 +30,7 @@
             <div class="col-lg-6">
                 <div class="section-heading">
                     <h6>Trending</h6>
-                    <h2>Trending Games</h2>
+                    <h2>Last 5 Added Games</h2>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -41,8 +39,11 @@
                 </div>
             </div>
             <!-- App card -->
-            <div class="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 adv rac">
-                <app-card />
+            <div class="arebe">
+                <app-card *ngFor="let game of allGames" [game]="game" />
+                <ng-container *ngIf='allGames?.length === 0'>
+                    <h2>No offers yet.</h2>
+                </ng-container>
             </div>
 
 

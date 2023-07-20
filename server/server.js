@@ -1324,16 +1324,12 @@
                 userName: "Peter",
                 email: "peter@abv.bg",
                 avatarUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFc6nu-hZXjFxRxKYo-suaU4HgLKnhpRBLYA&usqp=CAU",
-                country: "England",
-                about: "Peter James Crouch (born 30 January 1981). English former professional footballer who played as a striker. Fan of United since 10",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             },
             "847ec027-f659-4086-8032-5173e2f9c93a": {
                 userName: "John",
                 email: "john@abv.bg",
                 avatarUrl: "https://www.usanetwork.com/sites/usablog/files/styles/blog-post-embedded--mobile/public/2023/02/how-to-watch-john-wick.jpg",
-                country: "USA",
-                about: "I am considered one of the greatest fans of Manchester United ever lived.",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             }
         },
@@ -1341,32 +1337,32 @@
         }
     };
     var seedData = {
-        blogs: {
+        games: {
             "ff436770-76c5-40e2-b231-77409eda7a61": {
+                "imageUrl": "https://image.api.playstation.com/cdn/HP0002/CUSA05373_00/us76R5zRi3SYn6IhmVnwmbg8pW6brdpVCsMIwsC6JeBdNnSHtltWLUdpjAOnttrM.png",
+                "title": "Call of Duty®: Modern Warfare®",
+                "category": "Shooter",
+                "price": "19.79",
+                "description": "Experience a visceral Campaign or assemble your team in the ultimate online playground with multiple Special Ops challenges and a mix of Multiplayer maps and modes.",
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "imageUrl": "https://icdn.strettynews.com/wp-content/uploads/2023/03/fbl-eng-pr-man-utd-southampton.jpg",
-                "title": "Three observations after Manchester United’s draw against Southampton",
-                "category": "Premier League",
-                "description": "Manchester United were not helped by the Casemiro red card, but the result still feels like a disappointing one because a win would have come as a huge boost in the race for top four. Manchester United were unable to return to winning ways in the Premier League on Sunday when they were held by bottom club Southampton.",
-                "text": "A 10-man Manchester United were kept to a scoreless draw at Old Trafford. Manchester United were not helped by the Casemiro red card, but the result still feels like a disappointing one because a win would have come as a huge boost in the race for top four. Manchester United were unable to return to winning ways in the Premier League on Sunday when they were held by bottom club Southampton.",
                 "_createdOn": 1680013127272,
             },
             "1840a313-225c-416a-817a-9954d4609f7c": {
+                "imageUrl": "https://s25.q4cdn.com/103200307/files/doc_multimedia/FC24_standardkeyart_16x9.jpg",
+                "title": "EA SPORTS FC™ 24",
+                "category": "Sport",
+                "price": "69.99",
+                "description": "EA SPORTS FC™ 24 is a new era for The World’s Game: 19,000+ fully licensed players, 700+ teams, and 30+ leagues playing together in the most authentic football experience ever created.",
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "imageUrl": "https://icdn.strettynews.com/wp-content/uploads/2023/03/fbl-eng-pr-man-utd-southampton-1.jpg",
-                "title": "Varane 10, Martinez 9: player ratings from Manchester United 0-0 Southampton",
-                "category": "Premier League",
-                "description": "Manchester United have failed to get back to winning ways in the Premier League as they were held by Southampton but there were mitigating circumstances at Old Trafford.",
-                "text": "Erik ten Hag named a strong side for the game, with Bruno Fernandes playing in a deeper midfield role alongside Casemiro. Jadon Sancho came in for Fred and the young winger played centrally behind Wout Weghorst. That pre-match setup looked encouraging but that would all change roughly 30 minutes into the first half when Casemiro was given his marching orders for a challenge on Carlos Alcaraz. Interestingly, United’s output in all areas of the pitch improved after going down to 10 men and looked like they might win the game after all.",
                 "_createdOn": 1680013404599,
             },
             "126777f5-3277-42ad-b874-76d043b069cb": {
+                "imageUrl": "https://strangelyawesomegames.com/wp-content/uploads/2023/07/ff16-1670857060064.png",
+                "title": "FINAL FANTASY XVI",
+                "category": "Action",
+                "price": "80.99",
+                "description": "An epic dark fantasy world where the fate of the land is decided by the mighty Eikons and the Dominants who wield them. This is the tale of Clive Rosfield, a warrior granted the title “First Shield of Rosaria” and sworn to protect his younger brother Joshua, the dominant of the Phoenix. Before long, Clive will be caught up in a great tragedy and swear revenge on the Dark Eikon Ifrit, a mysterious entity that brings calamity in its wake.",
                 "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-                "imageUrl": "https://icdn.strettynews.com/wp-content/uploads/2023/03/real-betis-v-manchester-united-round-of-16-leg-two-uefa-europa-league-3.jpg",
-                "title": "Bruno Fernandes wary of Fulham threat ahead of quarter-final tie.",
-                "category": "Premier League",
-                "description": "Manchester United have entered the most exciting part of the season as they are still in the running to add another two trophies to their haul following their Carabao Cup triumph last month.",
-                "text": "Erik ten Hag’s men are fairly secure in their league position in what is turning out to be quite the debut campaign for the Dutchman at Old Trafford. Having already ended United’s six-year wait for a trophy, United are at the quarter-final stage in the FA Cup and the Europa League, with ties against Fulham and Sevilla coming up respectively. First up, Fulham will be making the trip to Old Trafford this weekend and speaking ahead of the game, Bruno Fernandes has admitted that getting past the in-form London side will not be an easy task. “As David said, we have to beat the best to be in the final,” he told the official Manchester United website after David de Gea named Fulham as one of the best teams remaining in the tournament.",
                 "_createdOn": 1680013448609,
             }
         },
@@ -1384,8 +1380,6 @@
                 "userName": "Peter",
                 "email": "peter@abv.bg",
                 "avatarUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFc6nu-hZXjFxRxKYo-suaU4HgLKnhpRBLYA&usqp=CAU",
-                "country": "England",
-                "about": "Peter James Crouch (born 30 January 1981). English former professional footballer who played as a striker. Fan of United since 10",
                 "_id": "35c62d76-8152-4626-8712-eeb96381bea8"
         
             },
@@ -1393,8 +1387,6 @@
                 "userName": "John",
                 "email": "john@abv.bg",
                 "avatarUrl": "https://www.usanetwork.com/sites/usablog/files/styles/blog-post-embedded--mobile/public/2023/02/how-to-watch-john-wick.jpg",
-                "country": "USA",
-                "about": "I am considered one of the greatest fans of Manchester United ever lived.",
                 "_id": "847ec027-f659-4086-8032-5173e2f9c93a"
             }
         }

@@ -1,0 +1,18 @@
+.card {
+    width: 300px;
+    margin-right: 10px;
+    border-color: white;
+}
+
+.card .item {
+    height: 270px;
+}
+
+.card .thumb {
+    height: 167px;
+}
+
+.card .price {
+    right: 200px;
+    top: 10px;
+}

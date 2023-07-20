@@ -19,6 +19,7 @@ import { DetailsComponent } from './user/details/details.component';
 import { CreateComponent } from './user/create/create.component';
 import { EditComponent } from './user/edit/edit.component';
 import { ProfileComponent } from './user/profile/profile.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   { path: '', pathMatch: 'full', component: HeroComponent },
@@ -42,6 +43,7 @@ const appRoutes: Routes = [
     SharedModule,
     AuthModule,
     UserModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [],

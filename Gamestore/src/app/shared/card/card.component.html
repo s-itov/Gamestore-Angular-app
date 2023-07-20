@@ -1,11 +1,13 @@
-<div class="item">
-    <div class="thumb">
-        <a routerLink="/123/details"><img src="assets/images/trending-03.jpg" alt=""></a>
-        <span class="price">$20</span>
-    </div>
-    <div class="down-content">
-        <span class="category">Action</span>
-        <h4>Assasin Creed</h4>
-        <a routerLink="/123/details"><i class="fa fa-shopping-bag"></i></a>
+<div class="card" *ngIf="game">
+    <div class="item">
+        <div class="thumb">
+            <a routerLink="/{{game._id}}/details"><img src={{game.imageUrl}} alt={{game.title}}></a>
+            <span class="price">${{game.price}}</span>
+        </div>
+        <div class="down-content">
+            <span class="category">{{game.category}}</span>
+            <h4>{{game.title}}</h4>
+            <a routerLink="/{{game._id}}/details"><i class="fa fa-shopping-bag"></i></a>
+        </div>
     </div>
 </div>
