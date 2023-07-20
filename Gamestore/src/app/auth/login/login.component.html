@@ -10,14 +10,22 @@
 
 <section class="login-form">
     <h2>Login</h2>
-    <form>
+    <form [formGroup]="loginForm">
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" name="email" placeholder="email"/>
+            <input type="email" formControlName="email" placeholder="email" />
+            <div *ngIf="(loginForm.get('email')?.touched || isSubmitted)" >
+                <p class="red" *ngIf="loginForm.get('email')?.errors?.['required']">Email is required</p>
+                <p class="red" *ngIf="loginForm.get('email')?.errors?.['email']">Invalid email.</p>
+            </div>
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" name="password" placeholder="password"/>
+            <input type="password" formControlName="password" placeholder="password" />
+            <div *ngIf="(loginForm.get('password')?.touched || isSubmitted)" >
+                <p class="red" *ngIf="loginForm.get('password')?.errors?.['required']">Password is required</p>
+                <p class="red" *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters long</p>
+            </div>
         </div>
         <button type="submit">Login</button>
         <p class="field">
