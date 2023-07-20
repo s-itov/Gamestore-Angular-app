@@ -8,5 +8,7 @@ import { IGameReturnData } from 'src/app/interfaces/gameInterfaces';
 })
 export class CardComponent {
   @Input() game!: IGameReturnData;
-
+  idGame!: string;
+  idGameOwner!: string;
+  gameCreatedOn!: number;
 }

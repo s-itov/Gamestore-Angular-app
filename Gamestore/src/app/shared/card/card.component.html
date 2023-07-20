@@ -1,4 +1,5 @@
-<div class="card" *ngIf="game">
+<div class="card" #cardElement *ngIf="game" [attr.idGame]='game._id' [attr.idGameOwner]="game._ownerId"
+[attr.gameCreatedOn]="game._createdOn">
     <div class="item">
         <div class="thumb">
             <a routerLink="/{{game._id}}/details"><img src={{game.imageUrl}} alt={{game.title}}></a>
