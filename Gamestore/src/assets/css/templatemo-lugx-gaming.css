@@ -386,13 +386,28 @@ Header Style
   letter-spacing: .25px;
 }
 
-.header-area .main-nav .nav li:nth-last-child(-n+2) a {
+
+.header-area .main-nav .nav .sign{
   background-color: #ee626b;
   text-transform: uppercase;
   font-weight: 500;
 }
 
-.header-area .main-nav .nav li::nth-last-child(-n+2):hover a {
+.header-area .main-nav .nav .reg{
+  background-color: #ee626b;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.header-area .main-nav .nav .logout{
+  background-color: #ee626b;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+.header-area .main-nav .nav .sign, .reg, .logout:hover a {
   background-color: #ee626b;
 }
 

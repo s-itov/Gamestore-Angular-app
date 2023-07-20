@@ -10,7 +10,8 @@
 
 <section class="login-form">
     <h2>Login</h2>
-    <form [formGroup]="loginForm">
+    <p class="red">{{errorMsg}}</p>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label for="email">Email</label>
             <input type="email" formControlName="email" placeholder="email" />
@@ -27,7 +28,7 @@
                 <p class="red" *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters long</p>
             </div>
         </div>
-        <button type="submit">Login</button>
+        <button [disabled]="this.loginForm.invalid" type="submit">Login</button>
         <p class="field">
             <span>If you don't have a profile click <a routerLink="/register">here</a></span>
         </p>
