@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { emailValidator } from 'src/app/validators/emailValidator';
 
 @Component({
   selector: 'app-login',
@@ -11,9 +10,12 @@ import { emailValidator } from 'src/app/validators/emailValidator';
 export class LoginComponent {
 
   isSubmitted = false;
+
+  errorServer: boolean = false;
+  errorMsg: string = '';
  
   loginForm = this.fb.group({
-    email: ['', [Validators.required, emailValidator()]],
+    email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(6)]],
   });
 

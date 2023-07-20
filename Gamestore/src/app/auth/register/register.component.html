@@ -10,53 +10,48 @@
 
 <section class="register-form">
     <h2>Register</h2>
-    <form>
+    <form [formGroup]="registerForm">
         <div class="form-group">
             <label for="username">Username</label>
-            <input
-                type="text"
-                id="username"
-                name="userName"
-                placeholder="Your username"
-            />
+            <input type="text" id="username" formControlName="username" placeholder="Your username" />
+            <div *ngIf="(registerForm.get('username')?.touched || isSubmitted)" >
+                <p class="red" *ngIf="registerForm.get('username')?.errors?.['required']">Username is required</p>
+                <p class="red" *ngIf="registerForm.get('username')?.errors?.['minlength']">Username must be at least 3 symbols long</p>
+            </div>
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Your email"
-            />
+            <input type="email" id="email" formControlName="email" placeholder="Your email" />
+            <div *ngIf="(registerForm.get('email')?.touched || isSubmitted)" >
+                <p class="red" *ngIf="registerForm.get('email')?.errors?.['required']">Email is required</p>
+                <p class="red" *ngIf="registerForm.get('email')?.errors?.['email']">Invalid email.</p>
+            </div>
         </div>
         <div class="form-group">
             <label for="avatarUrl">Avatar URL</label>
-            <input
-                type="text"
-                id="avatarUrl"
-                name="avatarUrl"
-                placeholder="https://avatarUrl"
-            />
+            <input type="text" id="avatarUrl" formControlName="avatarUrl" placeholder="https://avatarUrl" />
+            <div *ngIf="(registerForm.get('avatarUrl')?.touched || isSubmitted)" >
+                <p class="red" *ngIf="registerForm.get('avatarUrl')?.errors?.['required']">Avatar URL is required</p>
+                <p class="red" *ngIf="registerForm.get('avatarUrl')?.errors?.['invalidAvatarUrl']">Invalid Avatar URL.</p>
+            </div>
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Password"
-            />
+            <input type="password" id="password" formControlName="password" placeholder="Password" />
+            <div *ngIf="(registerForm.get('password')?.touched || isSubmitted)" >
+                <p class="red" *ngIf="registerForm.get('password')?.errors?.['required']">Password is required</p>
+                <p class="red" *ngIf="registerForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters long</p>
+            </div>
         </div>
         <div class="form-group">
-            <label for="confirmPassword">Confirm Password</label>
-            <input
-                type="password"
-                id="confirmPassword"
-                name="confirmPassword"
-                placeholder="Confirm password"
-            />
-        </div>
-
+            <label for="rePassword">Confirm Password</label>
+            <input type="password" id="rePassword" formControlName="rePassword" placeholder="Confirm password" />
+            <div *ngIf="(registerForm.get('rePassword')?.touched || isSubmitted)">
+              <p class="red" *ngIf="registerForm.hasError('passwordMismatch')">Password mismatch</p>
+              <p class="red" *ngIf="registerForm.get('rePassword')?.errors?.['minlength']">Password must be at least 6 characters long</p>
+            </div>
+          </div>
+          
         <button type="submit">Register</button>
         <p class="field">
             <span>If you already have a profile click <a routerLink="/login">here</a></span>

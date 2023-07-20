@@ -1,10 +1,13 @@
 import { AbstractControl, ValidatorFn } from '@angular/forms';
 
-export function httpsValidator(): ValidatorFn {
+export function avatarUrlValidator(): ValidatorFn {
   return (control: AbstractControl): { [key: string]: any } | null => {
-    const urlPattern = /^https:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/;
-    const isHttps = urlPattern.test(control.value);
+    const value = control.value;
 
-    return isHttps ? null : { https: true };
+    if (!value.startsWith('https://')) {
+      return { invalidAvatarUrl: true };
+    }
+
+    return null;
   };
 }
