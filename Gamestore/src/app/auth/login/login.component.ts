@@ -13,8 +13,7 @@ export class LoginComponent {
 
   errorServer: boolean = false;
   errorMsg: string = '';
-
-
+  
   loginForm = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(6)]],
@@ -43,7 +42,7 @@ export class LoginComponent {
           this.errorServer = true;
           console.log(msg);
           if (msg.status === 403) {
-            this.errorMsg = 'Email or password is wrong.';
+            this.errorMsg = 'Incorrect Email or Password .';
           }
         },
       });

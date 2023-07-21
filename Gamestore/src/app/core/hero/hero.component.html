@@ -3,7 +3,8 @@
         <div class="row">
             <div class="col-lg-6 align-self-center">
                 <div class="caption header-text">
-                    <h6>Welcome to lugx</h6>
+                    <h6 *ngIf="!username">Welcome to lugx</h6>
+                    <h6 *ngIf="username">Welcome {{username}} to lugx</h6>
                     <h2>BEST GAMING SITE EVER!</h2>
                     <p>Welcome to LUGX Gaming, the ultimate platform for gamers! Here, you can unleash the true potential of your owned games by creating enticing offers for other users to explore and purchase. Our user-friendly interface allows you to showcase your collection and set your desired prices effortlessly.</p>
                     <div class="search-input">

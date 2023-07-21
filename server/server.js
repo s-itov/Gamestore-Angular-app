@@ -1321,13 +1321,13 @@
     var protectedData = {
         users: {
             "35c62d76-8152-4626-8712-eeb96381bea8": {
-                userName: "Peter",
+                username: "Peter",
                 email: "peter@abv.bg",
                 avatarUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFc6nu-hZXjFxRxKYo-suaU4HgLKnhpRBLYA&usqp=CAU",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             },
             "847ec027-f659-4086-8032-5173e2f9c93a": {
-                userName: "John",
+                username: "John",
                 email: "john@abv.bg",
                 avatarUrl: "https://www.usanetwork.com/sites/usablog/files/styles/blog-post-embedded--mobile/public/2023/02/how-to-watch-john-wick.jpg",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
@@ -1371,20 +1371,20 @@
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
                 "blogId": "126777f5-3277-42ad-b874-76d043b069cb",
                 "comment": "Bruno Fernandes has played the most football in Europe’s top five leagues this season! In total of 3751 minutes! What a player!",
-                "userName": "Peter",
+                "username": "Peter",
                 "_createdOn": 1680690396020,
             }
         },
         creators: {
             "35c62d76-8152-4626-8712-eeb96381bea8": {
-                "userName": "Peter",
+                "username": "Peter",
                 "email": "peter@abv.bg",
                 "avatarUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFc6nu-hZXjFxRxKYo-suaU4HgLKnhpRBLYA&usqp=CAU",
                 "_id": "35c62d76-8152-4626-8712-eeb96381bea8"
         
             },
             "847ec027-f659-4086-8032-5173e2f9c93a": {
-                "userName": "John",
+                "username": "John",
                 "email": "john@abv.bg",
                 "avatarUrl": "https://www.usanetwork.com/sites/usablog/files/styles/blog-post-embedded--mobile/public/2023/02/how-to-watch-john-wick.jpg",
                 "_id": "847ec027-f659-4086-8032-5173e2f9c93a"

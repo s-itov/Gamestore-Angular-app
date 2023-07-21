@@ -10,8 +10,9 @@
 
 <section class="register-form">
     <h2>Register</h2>
-    <form [formGroup]="registerForm">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
+            <p class="red">{{errorMsg}}</p>
             <label for="username">Username</label>
             <input type="text" id="username" formControlName="username" placeholder="Your username" />
             <div *ngIf="(registerForm.get('username')?.touched || isSubmitted)" >
@@ -52,7 +53,7 @@
             </div>
           </div>
           
-        <button type="submit">Register</button>
+        <button [disabled]="this.registerForm.invalid" type="submit">Register</button>
         <p class="field">
             <span>If you already have a profile click <a routerLink="/login">here</a></span>
         </p>

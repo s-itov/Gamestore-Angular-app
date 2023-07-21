@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/auth/auth.service';
 import { IGameReturnData } from 'src/app/interfaces/gameInterfaces';
 import { UserCrudService } from 'src/app/user/user-crud.service';
 
@@ -9,9 +10,11 @@ import { UserCrudService } from 'src/app/user/user-crud.service';
 })
 export class HeroComponent {
 
+  username: string | null = '';
+
   allGames: IGameReturnData[] = [];
 
-  constructor(private userCRUD: UserCrudService) {}
+  constructor(private userCRUD: UserCrudService, private authService: AuthService) {}
 
   ngOnInit(): void {
     this.userCRUD.getAllGames().subscribe({
@@ -23,6 +26,10 @@ export class HeroComponent {
         alert(err);
       },
     });
+  }
+
+  ngDoCheck(): void {
+    this.username = this.authService.getUsername()   
   }
 
   private filterLastFiveGames(): void {

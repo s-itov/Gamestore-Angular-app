@@ -10,8 +10,10 @@ import { AuthService } from 'src/app/auth/auth.service';
 export class HeaderComponent {
   userData: any = null;
   isLoggedIn: boolean = false;
+  userName: string = '';
 
   constructor(private authService: AuthService, private router: Router) {}
+
 
   ngDoCheck(): void {
     const userDataString = this.authService.getUserData();
@@ -19,6 +21,7 @@ export class HeaderComponent {
       this.authService.setIsLoggedIn(true);
       this.isLoggedIn = this.authService.getIsLoggedIn();
       this.userData = JSON.parse(userDataString);
+      this.userName = this.userData.username;
     } else {
       this.authService.setIsLoggedIn(false);
       this.isLoggedIn = this.authService.getIsLoggedIn();
@@ -32,4 +35,6 @@ export class HeaderComponent {
       this.router.navigate(['']);
     }
   }
+
+
 }

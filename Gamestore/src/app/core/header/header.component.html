@@ -15,7 +15,7 @@
               <li><a routerLink="/catalog" routerLinkActive="active">Catalog</a></li>
               <li><a *ngIf="isLoggedIn"  routerLink="/create" routerLinkActive="active">Create offer</a></li>
               <li><a routerLink="/contact-us" routerLinkActive="active">Contact Us</a></li>
-              <li><a *ngIf="isLoggedIn"  routerLink="/profile">Your profile</a></li>
+              <li><a *ngIf="isLoggedIn"  routerLink="/profile">{{userName}}'s profile</a></li>
               <li><a *ngIf="!isLoggedIn" routerLink="/login" routerLinkActive="active" class="sign">Sign In</a></li>
               <li><a *ngIf="!isLoggedIn" routerLink="/register" routerLinkActive="active" class="reg" >Register</a></li>
               <li><a *ngIf="isLoggedIn" (click)="onLogoutHandler()" routerLinkActive="active" class="logout">Logout</a></li>
