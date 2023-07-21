@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RouterModule, Routes, UrlSerializer } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { CoreModule } from './core/core.module';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
@@ -20,6 +20,8 @@ import { CreateComponent } from './user/create/create.component';
 import { EditComponent } from './user/edit/edit.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './auth/auth.service';
+import { loginGuard } from './app-login.guard';
 
 const appRoutes: Routes = [
   { path: '', pathMatch: 'full', component: HeroComponent },
@@ -28,9 +30,9 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: ':id/details', pathMatch: 'full', component: DetailsComponent },
-  { path: 'create', component: CreateComponent }, //canActivate: [loginGuard] ,
+  { path: 'create', component: CreateComponent, canActivate: [loginGuard] }, 
   { path: ':id/edit', pathMatch: 'full', component: EditComponent }, // canActivate: [loginGuard, ownerGuard],
-  { path: 'profile', component: ProfileComponent }, //canActivate: [loginGuard] 
+  { path: 'profile', component: ProfileComponent, canActivate: [loginGuard] },
   { path: '**', component: NotFoundComponent },
 ];
 
@@ -46,7 +48,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

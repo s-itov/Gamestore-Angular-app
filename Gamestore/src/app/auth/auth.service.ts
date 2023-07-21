@@ -19,14 +19,7 @@ export class AuthService {
   }
 
   getUsername(): string | null {
-    const userDataString = localStorage.getItem('userData');
-
-    if (userDataString) {
-      const userData: IRegisterData = JSON.parse(userDataString);
-      return userData.username || null;
-    }
-
-    return null;
+    return JSON.parse(localStorage.getItem('userData') || '{}').username;
   }
 
   getUserAccessToken(): string | string[] {
