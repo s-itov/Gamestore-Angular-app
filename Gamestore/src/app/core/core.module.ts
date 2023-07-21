@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeroComponent } from './hero/hero.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { SharedModule } from '../shared/shared.module';
+import { GlobalLoaderComponent } from './global-loader/global-loader.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { SharedModule } from '../shared/shared.module';
     FooterComponent,
     HeroComponent,
     ContactUsComponent,
+    GlobalLoaderComponent,
   ],
   imports: [
     CommonModule, RouterModule, SharedModule
@@ -22,7 +24,8 @@ import { SharedModule } from '../shared/shared.module';
     HeaderComponent,
     FooterComponent,
     HeroComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    GlobalLoaderComponent,
   ]
 })
 export class CoreModule { }

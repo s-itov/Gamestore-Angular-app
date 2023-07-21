@@ -1364,6 +1364,24 @@
                 "description": "An epic dark fantasy world where the fate of the land is decided by the mighty Eikons and the Dominants who wield them. This is the tale of Clive Rosfield, a warrior granted the title “First Shield of Rosaria” and sworn to protect his younger brother Joshua, the dominant of the Phoenix. Before long, Clive will be caught up in a great tragedy and swear revenge on the Dark Eikon Ifrit, a mysterious entity that brings calamity in its wake.",
                 "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
                 "_createdOn": 1680013448609,
+            },
+            "126777f5-3277-42ad-b874-76d043b070cb": {
+                "imageUrl": "https://gamerupdate.de/wp-content/uploads/2023/03/Red-Dead-Redemption-2-Wallpaper-1068x604.jpg",
+                "title": "RED DEAD REDEMPTION 2",
+                "category": "Action",
+                "price": "22.00",
+                "description": "Winner of over 175 Game of the Year Awards and recipient of over 250 perfect scores, RDR2 is the epic tale of outlaw Arthur Morgan and the infamous Van der Linde gang, on the run across America at the dawn of the modern age. Also includes access to the shared living world of Red Dead Online.",
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "_createdOn": 1680013448610,
+            },
+            "126777f5-3277-42ad-b874-76d043b071cb": {
+                "imageUrl": "https://media.steampowered.com/apps/csgo/blog/images/fb_image.png?v=6",
+                "title": "Counter-Strike: GO",
+                "category": "Action",
+                "price": "5.00",
+                "description": "Counter-Strike: Global Offensive (CS: GO) expands upon the team-based action gameplay that it pioneered when it was launched 19 years ago. CS: GO features new maps, characters, weapons, and game modes, and delivers updated versions of the classic CS content (de_dust2, etc.).",
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "_createdOn": 1680690396020,
             }
         },
         comments: {
