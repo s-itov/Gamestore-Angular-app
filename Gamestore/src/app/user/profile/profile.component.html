@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3>Profile</h3>
+                <h3>{{userData.username}}'s PROFILE</h3>
             </div>
         </div>
     </div>
@@ -10,26 +10,24 @@
 
 <section class="author-info">
     <div class="author-card">
-        <img src="https://www.cinemacity.bg/xmedia-cw/repo/feats/posters/5482S2R-md.jpg" alt="Author Avatar" class="avatar" />
-        <h2 class="username">John Wick</h2>
-        <p class="country"><b>Country:</b> Bulgaria </p>
-        <p class="email"><b>Email:</b> simeon.itov@gmail.com </p>
+        <img src={{userData.avatarUrl}} alt="Author Avatar" class="avatar" />
+        <h2 class="username">{{userData.username}}</h2>
+        <p class="email"><b>Email:</b> {{userData.email}}</p>
     </div>
 
     <div class="vl"></div>
 
     <div class="blog-posts">
-        <h3 class="section-title">Recent Games added by userName:</h3>
+        <h3 class="section-title">Recent Games added by {{userData.username}}:</h3>
         <div class="section trending">
             <div class="container">
-                <div class="row trending-box">
-                    <div class="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 adv rac">
-                        <!-- App card -->
-                            <app-card />
-                    </div>
+                <div class="arebe">
+                    <app-card *ngFor="let game of userGames" [game]="game" />
+                    <ng-container *ngIf='userGames?.length === 0'>
+                        <h2>No offers yet.</h2>
+                    </ng-container>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
