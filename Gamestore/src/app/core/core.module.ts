@@ -8,6 +8,7 @@ import { HeroComponent } from './hero/hero.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { SharedModule } from '../shared/shared.module';
 import { GlobalLoaderComponent } from './global-loader/global-loader.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { GlobalLoaderComponent } from './global-loader/global-loader.component';
     GlobalLoaderComponent,
   ],
   imports: [
-    CommonModule, RouterModule, SharedModule
+    CommonModule, RouterModule, SharedModule, FormsModule
   ],
   exports: [
     HeaderComponent,

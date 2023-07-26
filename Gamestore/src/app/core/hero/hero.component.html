@@ -6,12 +6,15 @@
                     <h6 *ngIf="!username">Welcome to lugx</h6>
                     <h6 *ngIf="username">Welcome {{username}} to lugx</h6>
                     <h2>BEST GAMING SITE EVER!</h2>
-                    <p>Welcome to LUGX Gaming, the ultimate platform for gamers! Here, you can unleash the true potential of your owned games by creating enticing offers for other users to explore and purchase. Our user-friendly interface allows you to showcase your collection and set your desired prices effortlessly.</p>
+                    <p>Welcome to LUGX Gaming, the ultimate platform for gamers! Here, you can unleash the true
+                        potential of your owned games by creating enticing offers for other users to explore and
+                        purchase. Our user-friendly interface allows you to showcase your collection and set your
+                        desired prices effortlessly.</p>
                     <div class="search-input">
-                        <form id="search" action="#">
-                            <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword"
-                                onkeypress="handle" />
-                            <button role="button">Search Now</button>
+                        <form (ngSubmit)="onSearch()">
+                            <input type="search" type="text" placeholder="Type Something" id='searchText'
+                                name="searchKeyword" [(ngModel)]="searchTerm" />
+                            <button type="submit" role="button">Search Now</button>
                         </form>
                     </div>
                 </div>
@@ -40,13 +43,15 @@
                 </div>
             </div>
             <!-- App card -->
-            <div class="arebe">
+
+            <div class="arebe" *ngIf="filteredGames.length === 0">
                 <app-card *ngFor="let game of allGames" [game]="game" />
-                <ng-container *ngIf='allGames?.length === 0'>
-                    <h2>No offers yet.</h2>
-                </ng-container>
             </div>
 
-
+            <!-- TODO: show apropriate message when not filteredGames are found -->
+            <div class="arebe" *ngIf="filteredGames.length > 0">
+                <app-card *ngFor="let game of filteredGames" [game]="game" />
+            </div>
         </div>
     </div>
+</div>

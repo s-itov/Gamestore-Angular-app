@@ -14,6 +14,9 @@ export class HeroComponent {
 
   allGames: IGameReturnData[] = [];
 
+  searchTerm: string = '';
+  filteredGames: IGameReturnData[] = [];
+
   constructor(
     private userCRUD: UserCrudService,
     private authService: AuthService,
@@ -40,7 +43,20 @@ export class HeroComponent {
     this.username = this.authService.getUsername();
   }
 
-  private filterLastFourGames(): void {
+  onSearch() {
+    if (this.searchTerm.trim() === '') {
+      this.filteredGames = this.allGames
+    } else {
+      // Filter the games based on the search term
+      this.filteredGames = this.allGames.filter((game: IGameReturnData) =>
+        game.title.toLowerCase().includes(this.searchTerm.toLowerCase())
+      );
+    }
+    // Prevent form submission and page refresh
+    return false;
+  }
+
+  filterLastFourGames(): void {
     this.allGames.sort(
       (a, b) =>
         new Date(b._createdOn).getTime() - new Date(a._createdOn).getTime()
