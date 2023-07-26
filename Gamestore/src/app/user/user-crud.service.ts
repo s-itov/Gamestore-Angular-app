@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { IGameReturnData } from '../interfaces/gameInterfaces';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { IGameData, IGameReturnData } from '../interfaces/gameInterfaces';
 import { serverUrl } from '../constants/serverConstants';
+import { Observable } from 'rxjs/internal/Observable';
 
 
 @Injectable({
@@ -17,6 +18,15 @@ export class UserCrudService {
 
   getOfferById(id: string | null) {
     return this.http.get<IGameReturnData>(`${serverUrl.games}/${id}`);
+  }
+
+  createOffer( gameData: IGameData, accessToken: string | string[]): Observable<IGameReturnData> {
+    return this.http.post<IGameReturnData>(serverUrl.games, gameData, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'X-Authorization': accessToken,
+      }),
+    });
   }
 
 }

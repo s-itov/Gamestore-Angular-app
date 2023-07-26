@@ -71,3 +71,9 @@
     color: black;
   }
   
+
+  .red {
+    font-style: italic;
+    color: red;
+    text-align: center;
+  }

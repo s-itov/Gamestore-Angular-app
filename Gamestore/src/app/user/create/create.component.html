@@ -10,33 +10,52 @@
 
 <section class="create-form">
     <h2>Add game offer</h2>
-    <form>
+    <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label for="imageUrl">Image URL:</label>
-            <input type="text" id="imageUrl" name="imageUrl" placeholder="https://image" />
+            <input type="text" id="imageUrl" formControlName="imageUrl" placeholder="https://imageUrl" />
+            <div *ngIf="(createForm.get('imageUrl')?.touched || isSubmitted)" >
+                <p class="red" *ngIf="createForm.get('imageUrl')?.errors?.['required']">Image URL is required</p>
+                <p class="red" *ngIf="createForm.get('imageUrl')?.errors?.['invalidAvatarUrl']">Invalid Image URL.</p>
+            </div>
         </div>
+
 
         <div class="form-group">
             <label for="title">Title:</label>
-            <input type="text" id="title" name="title" placeholder="Game title" />
+            <input type="text" id="title" formControlName="title" placeholder="Game title" />
+            <div *ngIf="(createForm.get('title')?.touched || isSubmitted)" >
+                <p class="red" *ngIf="createForm.get('title')?.errors?.['required']">Title is required</p>
+            </div>
         </div>
 
         <div class="form-group">
             <label for="category">Category:</label>
-            <input type="text" id="category" name="category" placeholder="Category" />
+            <input type="text" id="category" formControlName="category" placeholder="Category" />
+            <div *ngIf="(createForm.get('category')?.touched || isSubmitted)" >
+                <p class="red" *ngIf="createForm.get('category')?.errors?.['required']">Title is required</p>
+            </div>
         </div>
 
         <div class="form-group">
             <label for="price">Price:</label>
-            <input type="number" id="price" name="price" placeholder="0.00$" />
+            <input type="number" id="price" formControlName="price" placeholder="0.00$" />
+            <div *ngIf="(createForm.get('price')?.touched || isSubmitted)" >
+                <p class="red" *ngIf="createForm.get('price')?.errors?.['required']">Price is required</p>
+                <p class="red" *ngIf="createForm.get('price')?.errors?.['minlength']">Price must be at least 1 character long</p>
+            </div>
         </div>
 
         <div class="form-group">
             <label for="text">Description:</label>
-            <textarea id="text" name="text" rows="30" placeholder="Description">
+            <textarea id="text" formControlName="description" rows="30" placeholder="Description">
             </textarea>
+            <div *ngIf="(createForm.get('description')?.touched || isSubmitted)" >
+                <p class="red" *ngIf="createForm.get('description')?.errors?.['required']">Description is required</p>
+                <p class="red" *ngIf="createForm.get('description')?.errors?.['minlength']">Description must be at least 20 characters long</p>
+            </div>
         </div>
 
-        <button type="submit">Submit</button>
+        <button [disabled]="this.createForm.invalid" type="submit">Submit</button>
     </form>
 </section>

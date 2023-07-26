@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, Validators } from '@angular/forms';
-import { avatarUrlValidator } from 'src/app/validators/httpsValidator';
+import { imageUrlValidator } from 'src/app/validators/httpsValidator';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 
@@ -20,7 +20,7 @@ export class RegisterComponent {
     {
       username: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required,  Validators.email]],
-      avatarUrl: ['', [Validators.required, avatarUrlValidator()]],
+      avatarUrl: ['', [Validators.required, imageUrlValidator()]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       rePassword: ['', [Validators.required, Validators.minLength(6)]],
     },
