@@ -45,7 +45,7 @@ export class CreateComponent {
       gameData.ownerInfo = JSON.parse(userData);
     }
     const accessToken = this.authService.getUserAccessToken();
-    this.userCRUD.createOffer(gameData, accessToken).subscribe({
+    this.userCRUD.createGame(gameData, accessToken).subscribe({
       next: (response) => {
         this.router.navigate([`${response._id}/details`]);
       },

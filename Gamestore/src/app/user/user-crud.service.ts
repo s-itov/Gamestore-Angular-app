@@ -20,7 +20,7 @@ export class UserCrudService {
     return this.http.get<IGameReturnData>(`${serverUrl.games}/${id}`);
   }
 
-  createOffer( gameData: IGameData, accessToken: string | string[]): Observable<IGameReturnData> {
+  createGame( gameData: IGameData, accessToken: string | string[]): Observable<IGameReturnData> {
     return this.http.post<IGameReturnData>(serverUrl.games, gameData, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
