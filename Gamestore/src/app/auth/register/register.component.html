@@ -11,6 +11,7 @@
 <section class="register-form">
     <h2>Register</h2>
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        
         <div class="form-group">
             <p class="red">{{errorMsg}}</p>
             <label for="username">Username</label>
@@ -20,6 +21,7 @@
                 <p class="red" *ngIf="registerForm.get('username')?.errors?.['minlength']">Username must be at least 3 symbols long</p>
             </div>
         </div>
+
         <div class="form-group">
             <label for="email">Email</label>
             <input type="email" id="email" formControlName="email" placeholder="Your email" />
@@ -28,6 +30,7 @@
                 <p class="red" *ngIf="registerForm.get('email')?.errors?.['email']">Invalid email.</p>
             </div>
         </div>
+
         <div class="form-group">
             <label for="avatarUrl">Avatar URL</label>
             <input type="text" id="avatarUrl" formControlName="avatarUrl" placeholder="https://avatarUrl" />
@@ -36,6 +39,7 @@
                 <p class="red" *ngIf="registerForm.get('avatarUrl')?.errors?.['invalidAvatarUrl']">Invalid Avatar URL.</p>
             </div>
         </div>
+
         <div class="form-group">
             <label for="password">Password</label>
             <input type="password" id="password" formControlName="password" placeholder="Password" />
@@ -44,6 +48,7 @@
                 <p class="red" *ngIf="registerForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters long</p>
             </div>
         </div>
+
         <div class="form-group">
             <label for="rePassword">Confirm Password</label>
             <input type="password" id="rePassword" formControlName="rePassword" placeholder="Confirm password" />

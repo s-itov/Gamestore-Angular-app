@@ -33,6 +33,10 @@
     border: 1px solid #ccc;
     border-radius: 25px;
   }
+
+  .form-group input.ng-invalid.ng-touched {
+    border: 1px solid red;
+  }
   
   button[type="submit"] {
     background-color: #ee626b;
@@ -61,4 +65,8 @@
     font-style: italic;
     color: red;
     text-align: center;
+  }
+
+  input.ng-invalid.ng-touched {
+    border: 1px solid red;
   }
