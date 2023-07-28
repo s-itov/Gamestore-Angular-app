@@ -319,6 +319,7 @@ Header Style
 .header-area .main-nav {
   background: transparent;
   display: flex;
+  align-items: center;
 }
 
 .header-area .main-nav .logo {
@@ -347,13 +348,14 @@ Header Style
   border-radius: 0px 0px 25px 25px;
   flex-basis: 100%;
   margin-top: 10px;
-  justify-content: right;
+  justify-content: flex-end;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   position: relative;
   z-index: 999;
+
 }
 
 .header-area .main-nav .nav li:last-child {
@@ -361,8 +363,10 @@ Header Style
 }
 
 .header-area .main-nav .nav li {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 4px; /* Adjust the value to add the desired left spacing */
+  margin-right: 4px; /* Adjust the value to add the desired left spacing */
   height: 40px;
   line-height: 40px;
 }
@@ -671,7 +675,7 @@ Banner Style
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 147px 0px;
+  padding: 130px 0px;
 }
 
 .main-banner .caption h6 {
@@ -704,6 +708,7 @@ Banner Style
 .main-banner .caption p {
   color: #fff;
   margin-bottom: 70px;
+  font-size: 20px;
 }
 
 .main-banner .caption form {

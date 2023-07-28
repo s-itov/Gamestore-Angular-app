@@ -14,6 +14,9 @@ export class CatalogComponent implements OnInit{
 
   allGames: IGameReturnData[] = [];
 
+  searchTerm: string = '';
+  filteredGames: IGameReturnData[] = [];
+
   constructor(private userCRUD: UserCrudService, private globalLoaderService: GlobalLoaderService ) {}
 
   ngOnInit(): void {
@@ -28,5 +31,16 @@ export class CatalogComponent implements OnInit{
         alert(err)
       },
     });
+  }
+
+  onSearch() {
+    if (this.searchTerm.trim() === '') {
+      this.filteredGames = this.allGames
+    } else {
+      this.filteredGames = this.allGames.filter((game: IGameReturnData) =>
+        game.title.toLowerCase().includes(this.searchTerm.toLowerCase())
+      );
+    }
+    return false;
   }
 }

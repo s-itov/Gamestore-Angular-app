@@ -1,20 +1,32 @@
-<div class="page-heading header-text">
+<div class="main-banner">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h3>ALL GAMES</h3>
+        <div class="caption">
+            <div class="col-lg-6 align-self-center">
+                <div class="caption">
+                    <h3>CATALOG</h3>
+                    <div class="search-input">
+                        <form (ngSubmit)="onSearch()">
+                            <input type="search" type="text" placeholder="Type Something" id='searchText'
+                                name="searchKeyword" [(ngModel)]="searchTerm" />
+                            <button type="submit" role="button">Search Now</button>
+                        </form>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
 </div>
 
 <div class="section trending">
     <div class="container">
-        <div class="arebe">
+        <div class="arebe" *ngIf="filteredGames.length === 0">
             <app-card *ngFor="let game of allGames" [game]="game" />
-            <ng-container *ngIf='allGames?.length === 0'>
-                <h2>No offers yet.</h2>
-            </ng-container>
+        </div>
+
+        <!-- TODO: show apropriate message when not filteredGames are found -->
+        <div class="arebe" *ngIf="filteredGames.length > 0">
+            <app-card *ngFor="let game of filteredGames" [game]="game" />
         </div>
     </div>
 </div>
