@@ -35,7 +35,7 @@
                     <a routerLink="/catalog">View All</a>
                 </div>
             </div>
-            <div class="arebe">>
+            <div class="arebe">
                 <app-card *ngFor="let game of allGames" [game]="game" />
                 <ng-container *ngIf='allGames?.length === 0'>
                     <h2>No offers yet.</h2>

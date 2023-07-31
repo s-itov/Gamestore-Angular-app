@@ -1,8 +1,8 @@
 export const serverUrl = {
-    base: 'http://localhost:3030',
-    login: 'http://localhost:3030/users/login',
-    register: 'http://localhost:3030/users/register',
-    logout: 'http://localhost:3030/users/logout',
-    games: 'http://localhost:3030/data/games',
-    contactUs: 'http://localhost:3030/jsonstore/contact-us',
+    base: 'https://gamestore-practice-server.onrender.com',
+    login: 'https://gamestore-practice-server.onrender.com/users/login',
+    register: 'https://gamestore-practice-server.onrender.com/users/register',
+    logout: 'https://gamestore-practice-server.onrender.com/users/logout',
+    games: 'https://gamestore-practice-server.onrender.com/data/games',
+    contactUs: 'https://gamestore-practice-server.onrender.com/jsonstore/contact-us',
   };
