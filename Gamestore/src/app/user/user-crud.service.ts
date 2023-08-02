@@ -9,17 +9,12 @@ import { Observable } from 'rxjs/internal/Observable';
   providedIn: 'root',
 })
 export class UserCrudService {
-
   
   serverUrl = environment.serverUrl;
-
-  
-  
   
   constructor(private http: HttpClient) { }
   
   getAllGames() {
-    console.log('Using environment:', environment.production ? 'production' : 'development');
     return this.http.get<IGameReturnData[]>(this.serverUrl.games);
   }
 
