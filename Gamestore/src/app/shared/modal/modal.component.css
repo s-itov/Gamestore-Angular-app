@@ -1,0 +1,77 @@
+.modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5dd4;
+    padding-top: 200px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    padding: 40px;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* Style the horizontal ruler */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+
+  .container p {
+    font-size: 18px;
+  }
+  
+  /* The Modal Close Button (x) */
+  .close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+  
+  /* Clear floats */
+  .clearfix {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 14px;
+  }
+
+  button[type="button"] {
+    background-color: #ee626b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 20%;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="button"] + button[type="button"] {
+    margin-left: 50px;
+  }
+
+  button[type="button"]:hover {
+    background-color: #0a58ca;
+  }
+  

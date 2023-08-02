@@ -31,4 +31,13 @@ export class UserCrudService {
     });
   }
 
+  deleteGame(gameId: string, accessToken: string | string[]) {
+    return this.http.delete(`${this.serverUrl.games}/${gameId}`, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'X-Authorization': accessToken,
+      }),
+    });
+  }
+
 }

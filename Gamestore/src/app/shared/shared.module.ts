@@ -4,12 +4,14 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { RouterModule } from '@angular/router';
 import { CardComponent } from './card/card.component';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
     NotFoundComponent,
     CardComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule, RouterModule
@@ -17,7 +19,8 @@ import { SpinnerComponent } from './spinner/spinner.component';
   exports: [
     NotFoundComponent,
     CardComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    ModalComponent
   ]
 })
 export class SharedModule { }
