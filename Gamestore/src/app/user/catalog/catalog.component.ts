@@ -11,7 +11,6 @@ import { GlobalLoaderService } from 'src/app/core/global-loader/global-loader.se
 })
 export class CatalogComponent implements OnInit{
 
-
   allGames: IGameReturnData[] = [];
 
   searchTerm: string = '';

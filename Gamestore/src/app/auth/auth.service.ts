@@ -3,13 +3,16 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { ILoginData, IRegisterData } from '../interfaces/authInterfaces';
 
-import { serverUrl } from '../constants/serverConstants';
+import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
+
+  serverUrl = environment.serverUrl
+
   isLoggedIn: boolean = false;
 
   constructor(private http: HttpClient) {}
@@ -43,16 +46,16 @@ export class AuthService {
   }
 
   login(userData: ILoginData): Observable<ILoginData> {
-    return this.http.post<ILoginData>(serverUrl.login, userData);
+    return this.http.post<ILoginData>(this.serverUrl.login, userData);
   }
 
   register(userData: IRegisterData): Observable<IRegisterData> {
-    return this.http.post<IRegisterData>(serverUrl.register, userData);
+    return this.http.post<IRegisterData>(this.serverUrl.register, userData);
   }
 
   logout(accessToken: string): void {
     this.clearUserData();
     const headers = new HttpHeaders().set('X-Authorization', accessToken);
-    this.http.get<any>(serverUrl.logout, { headers });
+    this.http.get<any>(this.serverUrl.logout, { headers });
   }
 }
