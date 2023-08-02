@@ -22,6 +22,7 @@ import { ProfileComponent } from './user/profile/profile.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './auth/auth.service';
 import { loginGuard } from './app-login.guard';
+import { ownerGuard } from './app-owner.guard';
 
 const appRoutes: Routes = [
   { path: '', pathMatch: 'full', component: HeroComponent },
@@ -31,7 +32,7 @@ const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: ':id/details', pathMatch: 'full', component: DetailsComponent },
   { path: 'create', component: CreateComponent, canActivate: [loginGuard] }, 
-  { path: ':id/edit', pathMatch: 'full', component: EditComponent }, // canActivate: [loginGuard, ownerGuard],
+  { path: ':id/edit', pathMatch: 'full', component: EditComponent, canActivate: [loginGuard, ownerGuard] }, 
   { path: 'profile', component: ProfileComponent, canActivate: [loginGuard] },
   { path: '**', component: NotFoundComponent },
 ];

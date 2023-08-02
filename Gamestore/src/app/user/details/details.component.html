@@ -20,10 +20,10 @@
           <h4>{{game.title}}</h4>
           <span class="price">${{game.price}}</span>
           <p>{{game.description}}</p>
-          <div id="qty">
+          <div id="qty" *ngIf="isLoggedIn">
             <button type="submit"><i class="fa fa-shopping-bag"></i>BUY</button>
-            <a routerLink="/123/edit"><i class="fa-regular fa-pen-to-square"></i>EDIT</a>
-            <button type="submit"><i class="fa-solid fa-trash"></i>DELETE</button>
+            <button *ngIf="isOwner" type="submit" routerLink="/{{game._id}}/edit"><i class="fa-regular fa-pen-to-square"></i>EDIT</button>
+            <button *ngIf="isOwner" type="submit"><i class="fa-solid fa-trash"></i>DELETE</button>
           </div>
           <ul>
             <li><span>Product ID:</span>{{game._id}}</li>

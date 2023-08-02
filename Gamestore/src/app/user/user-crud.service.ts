@@ -18,7 +18,7 @@ export class UserCrudService {
     return this.http.get<IGameReturnData[]>(this.serverUrl.games);
   }
 
-  getOfferById(id: string | null) {
+  getGameById(id: string | null) {
     return this.http.get<IGameReturnData>(`${this.serverUrl.games}/${id}`);
   }
 
