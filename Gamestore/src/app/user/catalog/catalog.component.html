@@ -24,7 +24,6 @@
             <app-card *ngFor="let game of allGames" [game]="game" />
         </div>
 
-        <!-- TODO: show apropriate message when not filteredGames are found -->
         <div class="arebe" *ngIf="filteredGames.length > 0">
             <app-card *ngFor="let game of filteredGames" [game]="game" />
         </div>

@@ -23,6 +23,8 @@ export class ownerGuard implements CanActivate {
     const user = this.authService.getUserData();
     if (user !== null) {
       const userId = JSON.parse(user)._id;
+      console.log(userId);
+      
       this.userCRUD.getGameById(gameId).subscribe({
         next: (response) => {
           if (response && response._ownerId === userId) {
