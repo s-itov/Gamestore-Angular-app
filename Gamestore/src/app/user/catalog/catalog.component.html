@@ -18,14 +18,20 @@
     </div>
 </div>
 
+<div *ngIf="isSubmitted" class="no-games">
+    <h4 *ngIf="filteredGames.length === 0">There are no games based on your searched criteria.</h4>
+</div>
+
 <div class="section trending">
     <div class="container">
         <div class="arebe" *ngIf="filteredGames.length === 0">
             <app-card *ngFor="let game of allGames" [game]="game" />
         </div>
 
-        <div class="arebe" *ngIf="filteredGames.length > 0">
+        <div class="arebe" *ngIf="filteredGames.length > 0 $$ isSubmitted">
             <app-card *ngFor="let game of filteredGames" [game]="game" />
         </div>
+
+
     </div>
 </div>

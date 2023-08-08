@@ -52,10 +52,23 @@
     transition: all .3s;
   }
 
+  .main-banner .caption form button:hover {
+    background-color: #0a58ca;
+  }
+
 .arebe {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.no-games {
+  color: #ee626b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: -100px;
 }

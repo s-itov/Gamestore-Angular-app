@@ -15,6 +15,8 @@ export class CatalogComponent implements OnInit{
 
   searchTerm: string = '';
   filteredGames: IGameReturnData[] = [];
+  isSubmitted: boolean = false; // Added isSubmitted variable
+
 
   constructor(private userCRUD: UserCrudService, private globalLoaderService: GlobalLoaderService ) {}
 
@@ -33,6 +35,8 @@ export class CatalogComponent implements OnInit{
   }
 
   onSearch() {
+    this.isSubmitted = true;
+    
     if (this.searchTerm.trim() === '') {
       this.filteredGames = this.allGames
     } else {
