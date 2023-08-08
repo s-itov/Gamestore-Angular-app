@@ -13,10 +13,10 @@
     <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label for="imageUrl">Image URL:</label>
-            <input type="text" id="imageUrl" formControlName="imageUrl" placeholder="https://imageUrl" />
+            <input type="text" id="imageUrl" formControlName="imageUrl" placeholder="https://imageUrl" (focus)="createForm.get('imageUrl')?.markAsTouched()"/>
             <div *ngIf="(createForm.get('imageUrl')?.touched || isSubmitted)" >
                 <p class="red" *ngIf="createForm.get('imageUrl')?.errors?.['required']">Image URL is required</p>
-                <p class="red" *ngIf="createForm.get('imageUrl')?.errors?.['invalidAvatarUrl']">Invalid Image URL.</p>
+                <p class="red" *ngIf="createForm.get('imageUrl')?.errors?.['invalidAvatarUrl']">Image URL must start with https://</p>
             </div>
         </div>
 
@@ -39,22 +39,23 @@
 
         <div class="form-group">
             <label for="price">Price:</label>
-            <input type="number" id="price" formControlName="price" placeholder="0.00$" />
+            <input type="number" id="price" formControlName="price" placeholder="0.00$" (focus)="createForm.get('price')?.markAsTouched()"/>
             <div *ngIf="(createForm.get('price')?.touched || isSubmitted)" >
-                <p class="red" *ngIf="createForm.get('price')?.errors?.['required']">Price is required</p>
                 <p class="red" *ngIf="createForm.get('price')?.errors?.['minlength']">Price must be at least 1 character long</p>
+                <p class="red" *ngIf="createForm.get('price')?.errors?.['required']">Price is required</p>
             </div>
         </div>
 
         <div class="form-group">
             <label for="text">Description:</label>
-            <textarea id="text" formControlName="description" rows="30" placeholder="Description">
+            <textarea id="text" formControlName="description" rows="30" placeholder="Description" (focus)="createForm.get('description')?.markAsTouched()">
             </textarea>
             <div *ngIf="(createForm.get('description')?.touched || isSubmitted)" >
-                <p class="red" *ngIf="createForm.get('description')?.errors?.['required']">Description is required</p>
                 <p class="red" *ngIf="createForm.get('description')?.errors?.['minlength']">Description must be at least 20 characters long</p>
+                <p class="red" *ngIf="createForm.get('description')?.errors?.['required']">Description is required</p>
             </div>
         </div>
+        
 
         <button [disabled]="this.createForm.invalid" type="submit">Submit</button>
     </form>

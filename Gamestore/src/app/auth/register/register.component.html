@@ -15,7 +15,7 @@
         <div class="form-group">
             <p class="red">{{errorMsg}}</p>
             <label for="username">Username</label>
-            <input type="text" id="username" formControlName="username" placeholder="Your username" />
+            <input type="text" id="username" formControlName="username" placeholder="Your username" (focus)="registerForm.get('username')?.markAsTouched()"/>
             <div *ngIf="(registerForm.get('username')?.touched || isSubmitted)" >
                 <p class="red" *ngIf="registerForm.get('username')?.errors?.['required']">Username is required</p>
                 <p class="red" *ngIf="registerForm.get('username')?.errors?.['minlength']">Username must be at least 3 symbols long</p>
@@ -24,7 +24,7 @@
 
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" formControlName="email" placeholder="Your email" />
+            <input type="email" id="email" formControlName="email" placeholder="Your email" (focus)="registerForm.get('email')?.markAsTouched()"/>
             <div *ngIf="(registerForm.get('email')?.touched || isSubmitted)" >
                 <p class="red" *ngIf="registerForm.get('email')?.errors?.['required']">Email is required</p>
                 <p class="red" *ngIf="registerForm.get('email')?.errors?.['email']">Invalid email.</p>
@@ -33,7 +33,7 @@
 
         <div class="form-group">
             <label for="avatarUrl">Avatar URL</label>
-            <input type="text" id="avatarUrl" formControlName="avatarUrl" placeholder="https://avatarUrl" />
+            <input type="text" id="avatarUrl" formControlName="avatarUrl" placeholder="https://avatarUrl" (focus)="registerForm.get('avatarUrl')?.markAsTouched()" />
             <div *ngIf="(registerForm.get('avatarUrl')?.touched || isSubmitted)" >
                 <p class="red" *ngIf="registerForm.get('avatarUrl')?.errors?.['required']">Avatar URL is required</p>
                 <p class="red" *ngIf="registerForm.get('avatarUrl')?.errors?.['invalidAvatarUrl']">Invalid Avatar URL.</p>
@@ -42,7 +42,7 @@
 
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" id="password" formControlName="password" placeholder="Password" />
+            <input type="password" id="password" formControlName="password" placeholder="Password" (focus)="registerForm.get('password')?.markAsTouched()" />
             <div *ngIf="(registerForm.get('password')?.touched || isSubmitted)" >
                 <p class="red" *ngIf="registerForm.get('password')?.errors?.['required']">Password is required</p>
                 <p class="red" *ngIf="registerForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters long</p>
