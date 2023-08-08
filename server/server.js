@@ -1344,6 +1344,13 @@
                 "category": "Shooter",
                 "price": "19.79",
                 "description": "Experience a visceral Campaign or assemble your team in the ultimate online playground with multiple Special Ops challenges and a mix of Multiplayer maps and modes.",
+                "ownerInfo": {
+                    "username": 'Peter',
+                    "email": 'peter@abv.bg',
+                    "avatarUrl": 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFc6nu-hZXjFxRxKYo-suaU4HgLKnhpRBLYA&usqp=CAU',
+                    "_id": '35c62d76-8152-4626-8712-eeb96381bea8',
+                    "accessToken": '45938d6ec141c35639934f39f7059fb006cae993191d99efcc683a88d4c15538'
+                  },
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
                 "_createdOn": 1680013127272,
             },
@@ -1353,6 +1360,13 @@
                 "category": "Sport",
                 "price": "69.99",
                 "description": "EA SPORTS FC™ 24 is a new era for The World’s Game: 19,000+ fully licensed players, 700+ teams, and 30+ leagues playing together in the most authentic football experience ever created.",
+                "ownerInfo": {
+                    "username": 'Peter',
+                    "email": 'peter@abv.bg',
+                    "avatarUrl": 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFc6nu-hZXjFxRxKYo-suaU4HgLKnhpRBLYA&usqp=CAU',
+                    "_id": '35c62d76-8152-4626-8712-eeb96381bea8',
+                    "accessToken": '45938d6ec141c35639934f39f7059fb006cae993191d99efcc683a88d4c15538'
+                  },
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
                 "_createdOn": 1680013404599,
             },
@@ -1362,6 +1376,13 @@
                 "category": "Action",
                 "price": "80.99",
                 "description": "An epic dark fantasy world where the fate of the land is decided by the mighty Eikons and the Dominants who wield them. This is the tale of Clive Rosfield, a warrior granted the title “First Shield of Rosaria” and sworn to protect his younger brother Joshua, the dominant of the Phoenix. Before long, Clive will be caught up in a great tragedy and swear revenge on the Dark Eikon Ifrit, a mysterious entity that brings calamity in its wake.",
+                "ownerInfo": {
+                    "username": 'John',
+                    "email": 'john@abv.bg',
+                    "avatarUrl": 'https://www.usanetwork.com/sites/usablog/files/styles/blog-post-embedded--mobile/public/2023/02/how-to-watch-john-wick.jpg',
+                    "_id": '847ec027-f659-4086-8032-5173e2f9c93a',
+                    "accessToken": 'aa94b5fa48ec4f087aeead1d42ea6e5e1e006e26abe26dfec2dcedd43b14e477'
+                  },
                 "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
                 "_createdOn": 1680013448609,
             },
@@ -1371,6 +1392,13 @@
                 "category": "Action",
                 "price": "22.00",
                 "description": "Winner of over 175 Game of the Year Awards and recipient of over 250 perfect scores, RDR2 is the epic tale of outlaw Arthur Morgan and the infamous Van der Linde gang, on the run across America at the dawn of the modern age. Also includes access to the shared living world of Red Dead Online.",
+                "ownerInfo": {
+                    "username": 'John',
+                    "email": 'john@abv.bg',
+                    "avatarUrl": 'https://www.usanetwork.com/sites/usablog/files/styles/blog-post-embedded--mobile/public/2023/02/how-to-watch-john-wick.jpg',
+                    "_id": '847ec027-f659-4086-8032-5173e2f9c93a',
+                    "accessToken": 'aa94b5fa48ec4f087aeead1d42ea6e5e1e006e26abe26dfec2dcedd43b14e477'
+                  },
                 "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
                 "_createdOn": 1680013448610,
             },
@@ -1380,6 +1408,13 @@
                 "category": "Action",
                 "price": "5.00",
                 "description": "Counter-Strike: Global Offensive (CS: GO) expands upon the team-based action gameplay that it pioneered when it was launched 19 years ago. CS: GO features new maps, characters, weapons, and game modes, and delivers updated versions of the classic CS content (de_dust2, etc.).",
+                "ownerInfo": {
+                    "username": 'John',
+                    "email": 'john@abv.bg',
+                    "avatarUrl": 'https://www.usanetwork.com/sites/usablog/files/styles/blog-post-embedded--mobile/public/2023/02/how-to-watch-john-wick.jpg',
+                    "_id": '847ec027-f659-4086-8032-5173e2f9c93a',
+                    "accessToken": 'aa94b5fa48ec4f087aeead1d42ea6e5e1e006e26abe26dfec2dcedd43b14e477'
+                  },
                 "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
                 "_createdOn": 1680690396020,
             }

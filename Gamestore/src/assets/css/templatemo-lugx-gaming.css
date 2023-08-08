@@ -1461,12 +1461,13 @@ Single Page Style
   background-color: #0071f8;
 }
 .single-product ul {
-  margin-top: 60px;
+  margin-top: 30px;
+  padding-left: 0rem;
 }
 
 .single-product ul li {
   display: block;
-  margin: 20px 0px;
+  margin: 10px 0px;
   font-size: 14px;
   color: #0071f8;
 }

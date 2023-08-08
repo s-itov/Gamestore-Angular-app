@@ -35,7 +35,7 @@ export class CreateComponent {
     let gameData: IGameData = {
       imageUrl: this.createForm.value.imageUrl || '',
       title: this.createForm.value.title || '',
-      category: this.createForm.value.title || '',
+      category: this.createForm.value.category || '',
       price: this.createForm.value.price || '',
       description: this.createForm.value.description || '',
       ownerInfo: { imageUrl: '', username: '', email: '' },
