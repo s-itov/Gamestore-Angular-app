@@ -40,4 +40,22 @@ export class UserCrudService {
     });
   }
 
+  updateGame(
+    idOffer: string,
+    offerData: IGameData,
+    accessToken: string | string[]
+  ): Observable<IGameReturnData> {
+    return this.http.put<IGameReturnData>(
+      `${this.serverUrl.games}/${idOffer}`,
+      offerData,
+      {
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json',
+          'X-Authorization': accessToken,
+        }),
+      }
+    );
+  }
+  
+
 }

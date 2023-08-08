@@ -33,7 +33,7 @@
             <label for="category">Category:</label>
             <input type="text" id="category" formControlName="category" placeholder="Category" />
             <div *ngIf="(createForm.get('category')?.touched || isSubmitted)" >
-                <p class="red" *ngIf="createForm.get('category')?.errors?.['required']">Title is required</p>
+                <p class="red" *ngIf="createForm.get('category')?.errors?.['required']">Category is required</p>
             </div>
         </div>
 

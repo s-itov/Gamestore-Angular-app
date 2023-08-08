@@ -19,6 +19,7 @@ export interface IGameReturnData {
   category: string;
   price: string;
   description: string;
+  ownerInfo: IOwnerData;
   _ownerId: string;
   _id: string;
   _createdOn: number;
