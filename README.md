@@ -13,7 +13,7 @@ This [project](https://github.com/s-itov/Gamestore-Angular-app.git) was created 
 
 It is deployed using firebase for the front end part and render.com for the back end. [View it LIVE here](https://gamestoreolx-73a85.web.app/)
 
-![Project Dashboard]([https://i.ibb.co/GWZvY0G/man-u-blog.png](https://ibb.co/YWSDTwb))
+![Project Dashboard](https://i.ibb.co/3sbfYQk/Screenshot-2023-08-09-114441.png)
 
 
 ## Built with
