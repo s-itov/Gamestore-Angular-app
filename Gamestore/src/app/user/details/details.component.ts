@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { IGameReturnData } from 'src/app/interfaces/gameInterfaces';
+import { IGameReturnData } from 'src/app/models/gameInterfaces';
 import { UserCrudService } from '../user-crud.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GlobalLoaderService } from 'src/app/core/global-loader/global-loader.service';
-import { IRegisterData } from 'src/app/interfaces/authInterfaces';
+import { IRegisterData } from 'src/app/models/authInterfaces';
 import { AuthService } from 'src/app/auth/auth.service';
-import { IModalDelete } from 'src/app/interfaces/IModalDelete';
+import { IModalDelete } from 'src/app/models/IModalDelete';
 
 @Component({
   selector: 'app-details',
@@ -23,6 +23,8 @@ export class DetailsComponent implements OnInit {
   errorMsg: string = '';
 
   isDeleteModalShowing: boolean = false;
+
+  isBought: boolean = false;
 
   constructor(
     private router: Router,
@@ -54,12 +56,11 @@ export class DetailsComponent implements OnInit {
         },
       });
     });
-    
-    this.isLoggedIn = this.authService.getIsLoggedIn();
 
+    this.isLoggedIn = this.authService.getIsLoggedIn();
   }
 
-  onShowDeleteModal() {   
+  onShowDeleteModal() {
     this.isDeleteModalShowing = !this.isDeleteModalShowing;
   }
 
@@ -81,4 +82,21 @@ export class DetailsComponent implements OnInit {
     }
   }
 
+  onBuyGame() {
+    let userDataJSON = this.authService.getUserData();
+    if (userDataJSON !== null) {
+      if (this.isBought === false) {
+        this.isBought = true;
+        let userAccessToken = JSON.parse(userDataJSON).accessToken;
+        let gameBuyerData = { ...this.game, idGame: this.game._id };
+        this.userCRUD.createGameBuyer(gameBuyerData, userAccessToken)
+        .subscribe({
+          next: (response) => {},
+          error: (msg) => {
+            console.log(msg);
+          }
+        });
+      }
+    }
+  }
 }

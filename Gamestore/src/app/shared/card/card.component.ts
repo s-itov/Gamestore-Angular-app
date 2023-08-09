@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IGameReturnData } from 'src/app/interfaces/gameInterfaces';
+import { IGameReturnData } from 'src/app/models/gameInterfaces';
 
 @Component({
   selector: 'app-card',

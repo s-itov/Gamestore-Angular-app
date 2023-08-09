@@ -1,19 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { IGameData, IGameReturnData } from '../interfaces/gameInterfaces';
+import { IGameBuyerDataReturnData, IGameData, IGameReturnData } from '../models/gameInterfaces';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs/internal/Observable';
-
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserCrudService {
-  
   serverUrl = environment.serverUrl;
-  
-  constructor(private http: HttpClient) { }
-  
+
+  constructor(private http: HttpClient) {}
+
   getAllGames() {
     return this.http.get<IGameReturnData[]>(this.serverUrl.games);
   }
@@ -22,7 +20,10 @@ export class UserCrudService {
     return this.http.get<IGameReturnData>(`${this.serverUrl.games}/${id}`);
   }
 
-  createGame( gameData: IGameData, accessToken: string | string[]): Observable<IGameReturnData> {
+  createGame(
+    gameData: IGameData,
+    accessToken: string | string[]
+  ): Observable<IGameReturnData> {
     return this.http.post<IGameReturnData>(this.serverUrl.games, gameData, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
@@ -56,6 +57,20 @@ export class UserCrudService {
       }
     );
   }
-  
 
+  createGameBuyer(gameData: IGameBuyerDataReturnData, accessToken: string) {
+    return this.http.post(this.serverUrl.gameBuyers, gameData, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'X-Authorization': accessToken,
+      }),
+    });
+  }
+
+  getGamesByBuyerId(id: string): Observable<IGameBuyerDataReturnData[]> {
+    const encodedUriId = encodeURIComponent(`="${id}"`);
+    return this.http.get<IGameBuyerDataReturnData[]>(
+      `${this.serverUrl.gamesBuyersGet}${encodedUriId}`
+    );
+  }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { IGameData, IGameReturnData } from 'src/app/interfaces/gameInterfaces';
+import { IGameData, IGameReturnData } from 'src/app/models/gameInterfaces';
 import { UserCrudService } from '../user-crud.service';
 import { AuthService } from 'src/app/auth/auth.service';
 import { imageUrlValidator } from 'src/app/validators/httpsValidator';

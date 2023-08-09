@@ -24,3 +24,26 @@ export interface IGameReturnData {
   _id: string;
   _createdOn: number;
 }
+
+export interface IGameBuyerData {
+  idGame: string;
+  imageUrl: string;
+  title: string;
+  category: string;
+  price: string;
+  description: string;
+  ownerInfo: IOwnerData;
+}
+
+export interface IGameBuyerDataReturnData {
+  idGame: string;
+  _ownerId: string;
+  imageUrl: string;
+  title: string;
+  category: string;
+  price: string;
+  description: string;
+  ownerInfo: IOwnerData;
+  _createdOn: number;
+  _id: string;
+}

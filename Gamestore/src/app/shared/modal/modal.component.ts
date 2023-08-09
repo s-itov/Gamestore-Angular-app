@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { IModalDelete } from 'src/app/interfaces/IModalDelete';
+import { IModalDelete } from 'src/app/models/IModalDelete';
 
 @Component({
   selector: 'app-modal',

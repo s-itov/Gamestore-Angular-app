@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth/auth.service';
 import { UserCrudService } from '../user-crud.service';
 import { imageUrlValidator } from 'src/app/validators/httpsValidator';
-import { IGameData } from 'src/app/interfaces/gameInterfaces';
+import { IGameData } from 'src/app/models/gameInterfaces';
 
 @Component({
   selector: 'app-create',

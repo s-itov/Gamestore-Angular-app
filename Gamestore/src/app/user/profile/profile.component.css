@@ -14,7 +14,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 18px;
     max-height: 440px;
-    margin-top: 36px;
+    margin-top: 120px;
   }
   
   
@@ -48,11 +48,11 @@
 
   .vl {
     border-left: 2px solid whitesmoke;
-    height: 406px;
+    height: 650px;
     position: absolute;
     left: 50%;
     margin-left: -531px;
-    margin-top: 36px;
+    margin-top: 120px;
   }
   
   .arebe {

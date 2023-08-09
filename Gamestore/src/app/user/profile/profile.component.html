@@ -18,8 +18,8 @@
     <div class="vl"></div>
 
     <div class="blog-posts">
-        <h3 class="section-title">Recent Games added by {{userData.username}}:</h3>
         <div class="section trending">
+            <h3 class="section-title">Recent Games added by {{userData.username}}:</h3>
             <div class="container">
                 <div class="arebe">
                     <app-card *ngFor="let game of userGames" [game]="game" />
@@ -28,6 +28,18 @@
                     </ng-container>
                 </div>
             </div>
+            <h3 class="section-title">Recent Games bought by {{userData.username}}:</h3>
+
+            <div class="container">
+                <div class="arebe">
+                    <app-card *ngFor="let game of userBoughtGames" [game]="game" />
+                    <ng-container *ngIf='userBoughtGames?.length === 0'>
+                        <h2>No games boughted yet.</h2>
+                    </ng-container>
+                </div>
+            </div>
         </div>
     </div>
+
+
 </section>

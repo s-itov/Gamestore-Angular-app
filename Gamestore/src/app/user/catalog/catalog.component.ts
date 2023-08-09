@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IGameReturnData } from 'src/app/interfaces/gameInterfaces';
+import { IGameReturnData } from 'src/app/models/gameInterfaces';
 import { UserCrudService } from '../user-crud.service';
 import { AuthService } from 'src/app/auth/auth.service';
 import { GlobalLoaderService } from 'src/app/core/global-loader/global-loader.service';

@@ -21,7 +21,8 @@
           <span class="price">${{game.price}}</span>
           <p>{{game.description}}</p>
           <div id="qty" *ngIf="isLoggedIn">
-            <button type="submit"><i class="fa fa-shopping-bag"></i>BUY</button>
+            <button *ngIf="!isOwner" (click)="onBuyGame()" type="submit"><i class="fa fa-shopping-bag"></i>{{isBought ?
+              'Bought' : 'Buy'}}</button>
             <button *ngIf="isOwner" type="submit" routerLink="/{{game._id}}/edit"><i class="fa-regular fa-pen-to-square"></i>EDIT</button>
             <button *ngIf="isOwner" type="submit" (click)="onShowDeleteModal()"><i class="fa-solid fa-trash"></i>DELETE</button>
           </div>

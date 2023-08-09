@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/auth/auth.service';
-import { IGameReturnData } from 'src/app/interfaces/gameInterfaces';
+import { IGameReturnData } from 'src/app/models/gameInterfaces';
 import { UserCrudService } from 'src/app/user/user-crud.service';
 import { GlobalLoaderService } from '../global-loader/global-loader.service';
 
