@@ -12,7 +12,7 @@
     background-color: #f7f7f7;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 18px;
+    padding: 45px;
     max-height: 440px;
     margin-top: 120px;
   }
@@ -48,7 +48,7 @@
 
   .vl {
     border-left: 2px solid whitesmoke;
-    height: 650px;
+    height: 450px;
     position: absolute;
     left: 50%;
     margin-left: -531px;
@@ -63,3 +63,8 @@
     flex-wrap: wrap;
 }
   
+.arebe h4{
+  margin-left: 300px;
+  margin-top: 10px;
+  color: red;
+}

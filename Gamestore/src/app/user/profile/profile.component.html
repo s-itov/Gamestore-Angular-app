@@ -15,16 +15,16 @@
         <p class="email"><b>Email:</b> {{userData.email}}</p>
     </div>
 
-    <div class="vl"></div>
-
+    
     <div class="blog-posts">
+        <div class="vl"></div>
         <div class="section trending">
             <h3 class="section-title">Recent Games added by {{userData.username}}:</h3>
             <div class="container">
                 <div class="arebe">
                     <app-card *ngFor="let game of userGames" [game]="game" />
                     <ng-container *ngIf='userGames?.length === 0'>
-                        <h2>No games added yet.</h2>
+                        <h4>No games added yet.</h4>
                     </ng-container>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                 <div class="arebe">
                     <app-card *ngFor="let game of userBoughtGames" [game]="game" />
                     <ng-container *ngIf='userBoughtGames?.length === 0'>
-                        <h2>No games boughted yet.</h2>
+                        <h4>No games bought yet.</h4>
                     </ng-container>
                 </div>
             </div>
