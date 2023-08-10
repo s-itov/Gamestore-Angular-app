@@ -54,9 +54,9 @@ Logged in useres can buy all the games that they have not created.
 
 ### Built With
 
--[Angular](https://angular.io/)
--[Bootstrap](https://getbootstrap.com/)
--[SoftUni Practice Server](https://github.com/softuni-practice-server/softuni-practice-server)
+- [Angular](https://angular.io/)
+- [Bootstrap](https://getbootstrap.com/)
+- [SoftUni Practice Server](https://github.com/softuni-practice-server/softuni-practice-server)
 
 ### To start the practice server:
 
