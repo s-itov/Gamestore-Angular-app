@@ -51,6 +51,7 @@ It is deployed using firebase for the front end part and render.com for the back
 1. Home page:
 
     - Hero section.
+    - Recent added games.
 
 2. Catalog page (Search by name of game):
 
