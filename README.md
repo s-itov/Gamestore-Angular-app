@@ -66,8 +66,8 @@ It is deployed using firebase for the front end part and render.com for the back
 
 5. Details (Buy, Edit, Delete) page"
 
-    -Any registered user can buy game as long as they are not the owner.
-    -Any registered user can edit game if they are owner.
+    - Any registered user can buy game as long as they are not the owner.
+    - Any registered user can edit game if they are owner.
 
 6. My profile page:
 
