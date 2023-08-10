@@ -15,78 +15,83 @@ It is deployed using firebase for the front end part and render.com for the back
 
 ![Project Dashboard](https://i.ibb.co/3sbfYQk/Screenshot-2023-08-09-114441.png)
 
+---
 
-## Built with
+## Public part
+
+This part of the platform is designed for non-registered users. These users have access to the following:
+
+* Home page -> 
+Main dashboard page in which the user can find basic information about the site as well as the recent added games. .
+* Catalog -> 
+Game catalog page which lists all available games created by the registerd users.
+* Details Page -> 
+A page offering more detailed information about the current game such as: image, title, description, game-id and the author.
+* AboutUS-> 
+A page with description about the site, location and contact form.
+* Login-> 
+A page where the login form for already registered users is located.
+* Register-> 
+A page where the register form for non-users is located.
+
+## Private part
+
+### Game creators private pages
+
+* Profile -> 
+The page where a game creator can view their user information, the games they have been published for sale and the games that they've bought.
+* Create game -> 
+A page with a form for creating a game.
+* Edit game -> 
+A page with a form for modification of a particularly selected game, part of their games.
+* Delete Blog -> 
+A page with a confirmation about the deletion of particularly selected game, part of their games.
+* Buy -> 
+Owners of a game can not see a buy option. 
+Logged in useres can buy all the games that they have not created.
+
+## About The Project - Technical Description
+
+### Built With
 
 -[Angular](https://angular.io/)
-
 -[Bootstrap](https://getbootstrap.com/)
-
 -[SoftUni Practice Server](https://github.com/softuni-practice-server/softuni-practice-server)
 
----
+### To start the practice server:
 
-## Use
+When you are in the project directory:
 
-1. Clone repository.
-2. Open folder.
-3. Run server.
+Navigate to the server directory. To execute the server run the following command:  `node server.js`.
 
-    > cd server
+### Authentication
 
-    > node server.js
+The server is initialized with two users, which can be used for immediate testing:
+* peter@abv.bg : 123456
+* john@abv.bg : 123456
 
-4. Run client.
+## Available Scripts
 
-    > cd client
+In the project directory, you can run:
 
-    > npm install
+### `ng serve`
 
-    > ng s 
+Runs the app in the development mode.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
----
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-## Pages
+### `ng serve --production`
 
-1. Home page:
+Builds the app for production to the `build` folder.\
+It correctly bundles Angular in production mode and optimizes the build for the best performance.
 
-    - Hero section.
-    - Recent added games.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-2. Catalog page (Search by name of game):
+## Learn More About Angular
 
-    - All games.
+You can learn more in the [Angular documentation](https://angular.io).
 
-3. Create page:
-
-    - Create game only if you are a registered user.
-
-4. Edit page:
-
-    - Edit offer only if you are an owner of current game.
-
-5. Details (Buy, Edit, Delete) page"
-
-    - Any registered user can buy game as long as they are not the owner.
-    - Any registered user can edit game if they are owner.
-    - Any registered user can delete their created game.
-
-6. My profile page:
-
-    - All games created by the current user.
-    - All games bought by the current user.
-
-7. Contact us page.
-8. Login page.
-9. Register page.
-
----
-
-## Available users
-
-| User         | Password |
-| ------------ | -------- |
-| peter@abv.bg | 123456   |
-| john@abv.bg  | 123456   |
-
----
+To learn Angular, check out the [Angular documentation](https://angular.io/docs).
