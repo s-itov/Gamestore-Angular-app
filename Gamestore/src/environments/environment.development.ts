@@ -7,8 +7,7 @@ export const environment = {
     logout: 'http://localhost:3030/users/logout',
     games: 'http://localhost:3030/data/games',
     gameBuyers: 'http://localhost:3030/data/gameBuyers',
-    gamesBuyersGet:
-    'http://localhost:3030/data/gameBuyers?where=_ownerId',
+    gamesBuyersGet:'http://localhost:3030/data/gameBuyers?where=_ownerId',
     contactUs: 'http://localhost:3030/jsonstore/contact-us',
   },
 };

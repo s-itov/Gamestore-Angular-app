@@ -1329,7 +1329,7 @@
             "847ec027-f659-4086-8032-5173e2f9c93a": {
                 username: "John",
                 email: "john@abv.bg",
-                avatarUrl: "https://www.usanetwork.com/sites/usablog/files/styles/blog-post-embedded--mobile/public/2023/02/how-to-watch-john-wick.jpg",
+                avatarUrl: "https://resizing.flixster.com/CbqVJ1ytK31FEiKPnndNscCvYTo=/218x280/v2/https://flxt.tmsimg.com/assets/487578_v9_ba.jpg",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             }
         },
@@ -1419,6 +1419,7 @@
                 "_createdOn": 1680690396020,
             }
         },
+        gameBuyers: [],
     };
     var rules$1 = {
         users: {
