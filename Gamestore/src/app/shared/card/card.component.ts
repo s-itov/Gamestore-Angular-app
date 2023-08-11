@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IGameReturnData } from 'src/app/models/gameInterfaces';
+import { IGameBuyerDataReturnData, IGameReturnData } from 'src/app/models/gameInterfaces';
 
 @Component({
   selector: 'app-card',
@@ -7,8 +7,16 @@ import { IGameReturnData } from 'src/app/models/gameInterfaces';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-  @Input() game!: IGameReturnData;
+
+    @Input() game!:
+    | IGameReturnData
+    | IGameBuyerDataReturnData
   idGame!: string;
-  idGameOwner!: string;
-  gameCreatedOn!: number;
+  idOfferOwner!: string;
+
+  ngOnInit(): void {
+    if (this.game.idGame) {
+      this.game._id = this.game.idGame;
+    }
+  }
 }

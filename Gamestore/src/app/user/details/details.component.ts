@@ -36,7 +36,7 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.globalLoaderService.showLoader();
-
+  
     this.route.paramMap.subscribe((params) => {
       const idGame = params.get('id');
       this.userCRUD.getGameById(idGame).subscribe({
@@ -48,17 +48,34 @@ export class DetailsComponent implements OnInit {
             let userId = JSON.parse(userDataJSON)._id;
             let ownerId = this.game._ownerId;
             userId === ownerId ? (this.isOwner = true) : (this.isOwner = false);
+  
+            this.userCRUD.getGamesByBuyerId(userId).subscribe({
+              next: (response) => {
+                if (response.length !== 0) {
+                  let currentFollowOffer = response.filter(
+                    (followed) => followed.idGame === this.game._id
+                  );
+                  if (currentFollowOffer.length !== 0) {
+                    this.isBought = true;
+                  }
+                }
+              },
+              error: (msg) => {
+                console.log(msg);
+              }
+            });
           }
         },
         error: (msg) => {
           this.globalLoaderService.hideLoader();
           console.log(msg);
-        },
+        }
       });
     });
-
+  
     this.isLoggedIn = this.authService.getIsLoggedIn();
   }
+  
 
   onShowDeleteModal() {
     this.isDeleteModalShowing = !this.isDeleteModalShowing;
@@ -75,6 +92,7 @@ export class DetailsComponent implements OnInit {
             this.router.navigate(['/profile']);
           },
           error: (msg) => {
+            this.globalLoaderService.hideLoader();
             console.log(msg);
           },
         });
@@ -85,14 +103,16 @@ export class DetailsComponent implements OnInit {
   onBuyGame() {
     let userDataJSON = this.authService.getUserData();
     if (userDataJSON !== null) {
-      if (this.isBought === false) {
+      if (this.isBought === false) {      
         this.isBought = true;
         let userAccessToken = JSON.parse(userDataJSON).accessToken;
         let gameBuyerData = { ...this.game, idGame: this.game._id };
         this.userCRUD.createGameBuyer(gameBuyerData, userAccessToken)
         .subscribe({
-          next: (response) => {},
+          next: (response) => {
+          },
           error: (msg) => {
+            this.globalLoaderService.hideLoader();
             console.log(msg);
           }
         });

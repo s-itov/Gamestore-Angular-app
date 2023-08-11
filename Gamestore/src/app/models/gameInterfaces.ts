@@ -14,6 +14,7 @@ export interface IGameData {
 }
 
 export interface IGameReturnData {
+  idGame?: string;
   imageUrl: string;
   title: string;
   category: string;

@@ -1419,7 +1419,6 @@
                 "_createdOn": 1680690396020,
             }
         },
-        gameBuyers: [],
     };
     var rules$1 = {
         users: {
