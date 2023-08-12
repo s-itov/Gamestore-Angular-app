@@ -101,6 +101,8 @@ export class DetailsComponent implements OnInit {
   }
 
   onBuyGame() {
+    this.globalLoaderService.showLoader();
+
     let userDataJSON = this.authService.getUserData();
     if (userDataJSON !== null) {
       if (this.isBought === false) {      
@@ -110,6 +112,8 @@ export class DetailsComponent implements OnInit {
         this.userCRUD.createGameBuyer(gameBuyerData, userAccessToken)
         .subscribe({
           next: (response) => {
+            this.globalLoaderService.hideLoader();
+            this.router.navigate(['/profile']);
           },
           error: (msg) => {
             this.globalLoaderService.hideLoader();

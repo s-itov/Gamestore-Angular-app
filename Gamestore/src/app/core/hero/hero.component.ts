@@ -32,9 +32,7 @@ export class HeroComponent {
         this.globalLoaderService.hideLoader();
       },
       error: (err) => {
-        this.globalLoaderService.hideLoader();
-
-        alert(err);
+        window.alert('The server is down. Please try again later');
       },
     });
   }
