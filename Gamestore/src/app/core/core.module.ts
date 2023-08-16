@@ -9,6 +9,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { SharedModule } from '../shared/shared.module';
 import { GlobalLoaderComponent } from './global-loader/global-loader.component';
 import { FormsModule } from '@angular/forms';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms';
     HeroComponent,
     ContactUsComponent,
     GlobalLoaderComponent,
+    NavigationComponent,
   ],
   imports: [
     CommonModule, RouterModule, SharedModule, FormsModule

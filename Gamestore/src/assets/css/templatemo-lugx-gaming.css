@@ -320,6 +320,7 @@ Header Style
   background: transparent;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .header-area .main-nav .logo {

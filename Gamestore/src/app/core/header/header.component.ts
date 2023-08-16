@@ -7,34 +7,4 @@ import { AuthService } from 'src/app/auth/auth.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
-  userData: any = null;
-  isLoggedIn: boolean = false;
-  userName: string = '';
-
-  constructor(private authService: AuthService, private router: Router) {}
-
-
-  ngDoCheck(): void {
-    const userDataString = this.authService.getUserData();
-    if (userDataString !== null) {
-      this.authService.setIsLoggedIn(true);
-      this.isLoggedIn = this.authService.getIsLoggedIn();
-      this.userData = JSON.parse(userDataString);
-      this.userName = this.userData.username;
-    } else {
-      this.authService.setIsLoggedIn(false);
-      this.isLoggedIn = this.authService.getIsLoggedIn();
-      this.userData = null;
-    }
-  }
-
-  onLogoutHandler() {
-    if (this.userData !== null) {
-      this.authService.logout(this.userData.accessToken);
-      this.router.navigate(['']);
-    }
-  }
-
-
-}
+export class HeaderComponent { }
